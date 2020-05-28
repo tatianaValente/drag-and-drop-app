@@ -44,7 +44,7 @@ Projeto criado em React para desenvolver um Drag and Drop usando a biblioteca Re
 -	draggableProps : DraggableProps - é um objeto que contém um dataatributo e uma linha style. Controla o movimento do arrastável quando está arrastando e não arrastando.
 -	dragHandleProps :? DragHandleProps - É usado para arrastar o todo <Draggable />
 ##### Exemplo:
-'<Draggable draggableId={this.props.task.id} index={this.props.index}>
+`<Draggable draggableId={this.props.task.id} index={this.props.index}>
     {provided => (
         <Container
             {...provided.draggableProps}
@@ -54,7 +54,7 @@ Projeto criado em React para desenvolver um Drag and Drop usando a biblioteca Re
             {this.props.task.content}
         </Container>
     )}
-</Draggable>'
+</Draggable>`
 
 #### `resetServerContext()` 
 Função deve ser usada quando a renderização do lado do servidor (SSR). Ele garante que o estado do contexto não persista em várias renderizações no servidor, o que resultaria em incompatibilidades de marcação de cliente / servidor depois que várias solicitações forem renderizadas no servidor.
