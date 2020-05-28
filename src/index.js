@@ -9,7 +9,7 @@ class App extends React.Component {
   state = initialData;
 
   onDragEnd = result => {
-    // todo
+    console.log(result)
   }
 
   render() {

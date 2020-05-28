@@ -7,6 +7,7 @@ border: 1px solid lightgrey;
 padding: 8px;
 border-radius: 2px;
 margin-bottom:8px;
+background-color: white;
 `;
 
 export default class Task extends React.Component {
