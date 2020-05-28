@@ -1,6 +1,6 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Projeto criado em React para desenvolver um Drag and Drop usando a biblioteca React Beautiful DND (https://github.com/atlassian/react-beautiful-dnd)
 
-## Available Scripts
+## React Beautiful DND
 
 In the project directory, you can run:
 
