@@ -10,11 +10,13 @@ Projeto criado em React para desenvolver um Drag and Drop usando a biblioteca Re
 
 ### Componentes da biblioteca:
 `<DragDropContext />` - Agrupa a parte do seu aplicativo que você deseja ativar e arrastar para.
-o	Props obrigatórios:
-	onDragEnd : função a ser executada quando 
+#### Props obrigatórios:
+- onDragEnd : função a ser executada quando 
 
 `<Droppable />` - Área em que pode solto o componente arrastado. Contém <Draggable /> s dentro dele. 
+
 `<Draggable />` - O que pode ser arrastado.
+
 `resetServerContext()` - Utilitário para renderização do lado do servidor
 
 
