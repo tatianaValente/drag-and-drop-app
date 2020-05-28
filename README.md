@@ -23,20 +23,14 @@ Projeto criado em React para desenvolver um Drag and Drop usando a biblioteca Re
 -	placeholder: ?Node - É usado para criar espaço no <Droppable /> conforme necessário durante um arrasto
 
 ##### Exemplo:
-`<Droppable droppableId="droppable-1">
 
+`<Droppable droppableId="droppable-1">
     {(provided, snapshot) => (
-    
         <div ref={provided.innerRef} {...provided.droppableProps}>
-        
             Good to go(Aqui deve ter um elemento <Draggable />)
-            
             {provided.placeholder}
-            
-        </div>
-        
+        </div>   
     )}
-    
 </Droppable>`
 
 #### `<Draggable />` - O que pode ser arrastado.
