@@ -11,7 +11,10 @@ Projeto criado em React para desenvolver um Drag and Drop usando a biblioteca Re
 ### Componentes da biblioteca:
 #### `<DragDropContext />` - Agrupa a parte do seu aplicativo que você deseja ativar e arrastar para.
 ##### Props obrigatórios:
-- onDragEnd : função a ser executada quando 
+-   onDragEnd : função a ser executada quando 
+##### Props opcionais:
+-	onDragUpdate: chamado quando algo muda durante o arraste
+-	onDragEnd: chamado no início do arraste
 
 #### `<Droppable />` - Área em que pode solto o componente arrastado. Contém <Draggable /> s dentro dele. 
 ##### Props obrigatórios:
@@ -45,16 +48,19 @@ Projeto criado em React para desenvolver um Drag and Drop usando a biblioteca Re
 -	dragHandleProps :? DragHandleProps - É usado para arrastar o todo <Draggable />
 ##### Exemplo:
 `<Draggable draggableId={this.props.task.id} index={this.props.index}>
-    {provided => (
+    {(provided, snapshot) => (
         <Container
             {...provided.draggableProps}
             {...provided.dragHandleProps}
             ref={provided.innerRef}
+            isDragging={snapshot.isDragging}
         >
             {this.props.task.content}
         </Container>
     )}
 </Draggable>`
+##### Observações:
+Outra propriedade provida pelo <Draggable> é o **snapshot**. Este objeto pode ser usado para dar style ao componente arrastado. 
 
 #### `resetServerContext()` 
 Função deve ser usada quando a renderização do lado do servidor (SSR). Ele garante que o estado do contexto não persista em várias renderizações no servidor, o que resultaria em incompatibilidades de marcação de cliente / servidor depois que várias solicitações forem renderizadas no servidor.
