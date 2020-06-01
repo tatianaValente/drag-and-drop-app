@@ -26,15 +26,16 @@ Projeto criado em React para desenvolver um Drag and Drop usando a biblioteca Re
 -	placeholder: ?Node - É usado para criar espaço no <Droppable /> conforme necessário durante um arrasto
 
 ##### Exemplo:
-
-`<Droppable droppableId="droppable-1">
+```
+<Droppable droppableId="droppable-1">
     {(provided, snapshot) => (
         <div ref={provided.innerRef} {...provided.droppableProps}>
             Good to go(Aqui deve ter um elemento <Draggable />)
             {provided.placeholder}
         </div>   
     )}
-</Droppable>`
+</Droppable>
+```
 
 #### `<Draggable />` - O que pode ser arrastado.
 
@@ -47,7 +48,8 @@ Projeto criado em React para desenvolver um Drag and Drop usando a biblioteca Re
 -	draggableProps : DraggableProps - é um objeto que contém um dataatributo e uma linha style. Controla o movimento do arrastável quando está arrastando e não arrastando.
 -	dragHandleProps :? DragHandleProps - É usado para arrastar o todo <Draggable />
 ##### Exemplo:
-`<Draggable draggableId={this.props.task.id} index={this.props.index}>
+```
+<Draggable draggableId={this.props.task.id} index={this.props.index}>
     {(provided, snapshot) => (
         <Container
             {...provided.draggableProps}
@@ -58,12 +60,12 @@ Projeto criado em React para desenvolver um Drag and Drop usando a biblioteca Re
             {this.props.task.content}
         </Container>
     )}
-</Draggable>`
+</Draggable>
+```
+
 ##### Observações:
 Outra propriedade provida pelo <Draggable> é o **snapshot**. Este objeto pode ser usado para dar style ao componente arrastado. 
 
-#### `resetServerContext()` 
-Função deve ser usada quando a renderização do lado do servidor (SSR). Ele garante que o estado do contexto não persista em várias renderizações no servidor, o que resultaria em incompatibilidades de marcação de cliente / servidor depois que várias solicitações forem renderizadas no servidor.
 
 
 
