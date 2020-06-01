@@ -3,7 +3,7 @@ Projeto criado em React para desenvolver um Drag and Drop usando a biblioteca Re
 ## React Beautiful DND
 
 ### Criação de um novo projeto em React:
-`npx create-react-app task-app`
+`npx create-react-app drag-and-drop-app`
 
 ### Adição da biblioteca de drag and drop:
 `npm add react-beatuful.dnd`
