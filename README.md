@@ -6,7 +6,7 @@ Projeto criado em React para desenvolver um Drag and Drop usando a biblioteca Re
 `npx create-react-app drag-and-drop-app`
 
 ### Adição da biblioteca de drag and drop:
-`npm add react-beatuful.dnd`
+`npm add react-beatuful-dnd`
 
 ### Componentes da biblioteca:
 #### `<DragDropContext />` - Agrupa a parte do seu aplicativo que você deseja ativar e arrastar para.
